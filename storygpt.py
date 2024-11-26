@@ -19,10 +19,16 @@ class StoryGPT:
     def create_story(self, verbose=False):
         self.verbose = verbose
 
-        self.generate_scenes()
+        print("Generating Story")
+        scenes = self.generate_scenes()
+
+        print("Generating Image Prompts")
         image_prompts = self.generate_image_prompts()
+
+        print("Generating Images")
         image_urls = self.generate_images(image_prompts)
-        self.show_images(image_urls)
+
+        self.show_images(image_urls, scenes)
 
     def generate_scenes(self):
         self.messages.append({
@@ -51,6 +57,15 @@ class StoryGPT:
             "role": "assistant",
             "content": [{ "type": "text", "text": story }]
         })
+
+        pattern = r"Scene \d+:"
+        scenes = re.split(pattern, story)
+        scenes = [scene.replace("\n", "") for scene in scenes]
+        scenes = [scene.replace(":", "") for scene in scenes]
+        scenes = [scene.replace("*", "") for scene in scenes]
+        scenes = [s for s in scenes if s]
+        
+        return scenes
 
     def generate_image_prompts(self):
         self.messages.append({
@@ -102,13 +117,15 @@ class StoryGPT:
             print(shared_prompt)
             print("\n---------------------------------\n")
 
-        pattern = r"Scene \d+:"
+        pattern = r"Scene \d+"
         prompts = re.split(pattern, image_prompts)
         prompts = [prompt.replace("\n", "") for prompt in prompts]
-        prompts = [s for s in prompts if s]
+        prompts = [prompt.replace(":", "") for prompt in prompts]
+        prompts = [prompt.replace("*", "") for prompt in prompts]
+        prompts = [s for s in prompts if len(s) > 10]
 
         if self.verbose:
-            print("\n-------IMAGE PROMPTS-------\n")
+            print(f"\n-------IMAGE PROMPTS-------\n")
             for prompt in prompts:
                 print(prompt)
             print("\n---------------------------\n")
@@ -117,10 +134,10 @@ class StoryGPT:
 
     def generate_images(self, image_prompts):
         image_urls = []
-        for prompt in image_prompts["prompts"]: 
+        for i in range(len(image_prompts["prompts"])): 
             response = self.client.images.generate(
                 model="dall-e-3",
-                prompt="Make sure no text is in the image. Generate the image in the art style of a cartoon. " + image_prompts["shared_prompt"] + prompt,
+                prompt="Make sure no text is in the image. Generate the image in the art style of a cartoon. " + image_prompts["shared_prompt"] + image_prompts["prompts"][i],
                 quality="standard",
                 n=1,
                 size="1024x1024"
@@ -129,14 +146,14 @@ class StoryGPT:
             image_urls.append(image_url)
 
             if self.verbose:
-                print("\n-------IMAGE URL-------\n")
+                print(f"\n-------IMAGE URL {i+1}-------\n")
                 print(image_url)
                 print("\n-----------------------\n")
         
         return image_urls
 
-    def show_images(self, image_urls):
-        fig, axes = plt.subplots(2, 3)
+    def show_images(self, image_urls, scenes):
+        fig, axes = plt.subplots(len(image_urls), 1, figsize=(5, len(image_urls) * 5))
         # Loop through the images and display them on the grid
         for i, ax in enumerate(axes.flat):
             if i < len(image_urls):
@@ -144,4 +161,5 @@ class StoryGPT:
                 img = Image.open(BytesIO(image_response.content))
                 ax.imshow(img)
                 ax.axis("off")
+                ax.set_title(scenes[i], fontsize=12, color='black')
         plt.show()
