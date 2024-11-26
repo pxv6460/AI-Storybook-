@@ -28,7 +28,7 @@ class StoryGPT:
         print("Generating Images")
         image_urls = self.generate_images(image_prompts)
 
-        self.show_images(image_urls, scenes)
+        return {"scenes": scenes, "image_urls": image_urls}
 
     def generate_scenes(self):
         self.messages.append({
