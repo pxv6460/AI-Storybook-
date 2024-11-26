@@ -7,12 +7,12 @@ from PIL import Image
 from io import BytesIO
 
 class StoryGPT:
-    def __init__(self, api_key, project_id, words):
+    def __init__(self, api_key, project_id, vibes):
         self.client = OpenAI(
             api_key=api_key,
             project=project_id,
         )
-        self.words = words
+        self.vibes = vibes
         self.messages = []
         self.verbose = False
 
@@ -33,7 +33,7 @@ class StoryGPT:
     def generate_scenes(self):
         self.messages.append({
             "role": "user",
-            "content": f"Please generate a children's story. Make sure the story is no more than 300 words. Give your output in plain text, without markdown. Add markers in the LLM’s output to indicate scene transitions (e.g., Scene 1:, Scene 2:). Include these words in your story: {json.dumps(self.words)}"
+            "content": f"Please generate a children's story. Make sure the story is no more than 300 words. Give your output in plain text, without markdown. Add markers in the LLM’s output to indicate scene transitions (e.g., Scene 1:, Scene 2:). The story should include: {json.dumps(self.vibes)}"
         })
 
         completion = self.client.chat.completions.create(
@@ -156,10 +156,10 @@ class StoryGPT:
         fig, axes = plt.subplots(len(image_urls), 1, figsize=(5, len(image_urls) * 5))
         # Loop through the images and display them on the grid
         for i, ax in enumerate(axes.flat):
-            if i < len(image_urls):
-                image_response = requests.get(image_urls[i])
-                img = Image.open(BytesIO(image_response.content))
-                ax.imshow(img)
-                ax.axis("off")
-                ax.set_title(scenes[i], fontsize=12, color='black')
+            image_response = requests.get(image_urls[i])
+            img = Image.open(BytesIO(image_response.content))
+            ax.imshow(img)
+            ax.axis("off")
+            ax.set_xlabel(scenes[i], fontsize=12, color="black", labelpad=10)
+                
         plt.show()
