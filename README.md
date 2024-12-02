@@ -78,3 +78,5 @@ The program was able to produce a continuous story with individual scenes and co
 - [OpeAI Story Model Final Code]()
 - [OpeAI Storybook Model Pipeline]()
 - [MadLibs Model]()
+## Image References
+[The art and magic of storytelling](https://pxpfoto.com/storytelling/)
