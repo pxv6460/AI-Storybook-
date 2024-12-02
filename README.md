@@ -1,5 +1,5 @@
 
-<img width="900" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.12.21%20AM.png">
+<img width="1500" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.12.21%20AM.png">
 
 ## Project-3 - AI Storytelling
 Team 2 to Tango - Niharika, Hazel, Azlan, Peter and Enrique
