@@ -75,7 +75,7 @@ The program was able to produce a continuous story with individual scenes and co
 ## Important Links
 
 - [Presentation](https://docs.google.com/presentation/d/1jbKWKgXU4R2W04QWH0Rhj7sKI2VNHgmkYwNa64NNSKc/edit?usp=sharing)
-- [OpeAI Story Model Final Code]()
+- [OpeAI Story Model Final Code](https://github.com/pxv6460/AI-Storybook-/blob/main/openai.ipynb)
 - [OpeAI Storybook Model Pipeline](https://github.com/pxv6460/AI-Storybook-/blob/main/storygpt.py)
 - [MadLibs Model]()
 - Cover Image References - [The art and magic of storytelling](https://pxpfoto.com/storytelling/)
