@@ -1,10 +1,6 @@
 from openai import OpenAI
 import re
 import json
-import matplotlib.pyplot as plt
-import requests
-from PIL import Image
-from io import BytesIO
 
 class StoryGPT:
     def __init__(self, api_key, project_id, vibes):
@@ -19,16 +15,16 @@ class StoryGPT:
     def create_story(self, verbose=False):
         self.verbose = verbose
 
-        print("Generating Story")
+        print("Generating Story...")
         scenes = self.generate_scenes()
 
-        print("Generating Image Prompts")
+        print("Generating Image Prompts...")
         image_prompts = self.generate_image_prompts()
 
-        print("Generating Images")
+        print("Generating Images...")
         image_urls = self.generate_images(image_prompts)
 
-        self.show_images(image_urls, scenes)
+        return {"scenes": scenes, "image_urls": image_urls}
 
     def generate_scenes(self):
         self.messages.append({
@@ -151,15 +147,3 @@ class StoryGPT:
                 print("\n-----------------------\n")
         
         return image_urls
-
-    def show_images(self, image_urls, scenes):
-        fig, axes = plt.subplots(len(image_urls), 1, figsize=(5, len(image_urls) * 5))
-        # Loop through the images and display them on the grid
-        for i, ax in enumerate(axes.flat):
-            image_response = requests.get(image_urls[i])
-            img = Image.open(BytesIO(image_response.content))
-            ax.imshow(img)
-            ax.axis("off")
-            ax.set_xlabel(scenes[i], fontsize=12, color="black", labelpad=10)
-                
-        plt.show()
