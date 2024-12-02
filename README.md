@@ -16,7 +16,7 @@ Team 2 to Tango - Niharika, Hazel, Azlan, Peter and Enrique
 - Theme - fairytale, adventure, moral etc.
 Entering these basic elements would help create a prompt that is the starting point for the story. The input is entered in a UI generated using Gradio
 
-<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.13.44%20AM.png">
+<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.20.11%20PM.png">
 
 ## Models 
 **StoryGPT** feature from OpenAI, designed to assist in generating plotlines ws used to generate the story. A pipeline is established to take the user input and generate an initial prompt 
