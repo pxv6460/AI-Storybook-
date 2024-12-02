@@ -1,4 +1,4 @@
-Once upon A(I) time ……
+<img width="824" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.13.44%20AM.png">
 
 ## Project-3 - AI Storybook 
 Team 2 to Tango - Niharika, Hazel, Azlan, Peter and Enrique
