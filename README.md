@@ -1,5 +1,5 @@
 
-<img width="800" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.12.21%20AM.png">
+<img width="900" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.12.21%20AM.png">
 
 ## Project-3 - AI Storytelling
 Team 2 to Tango - Niharika, Hazel, Azlan, Peter and Enrique
@@ -16,7 +16,7 @@ Team 2 to Tango - Niharika, Hazel, Azlan, Peter and Enrique
 - Theme - fairytale, adventure, moral etc.
 Entering these basic elements would help create a prompt that is the starting point for the story. The input is entered in a UI generated using Gradio
 
-<img width="800" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.13.44%20AM.png">
+<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%209.13.44%20AM.png">
 
 ## Models 
 **StoryGPT** feature from OpenAI, designed to assist in generating plotlines ws used to generate the story. A pipeline is established to take the user input and generate an initial prompt 
@@ -26,12 +26,12 @@ The end result is a story split into sub narratives or scenes.
 Scenes needed to have continuity especially of the same character to eventually be used as input prompts for the image generator. To solve for this an additional prompt was added to isolate the character descriptions. This prompt is then appended to each scene description to provide the input to the DALL.E model. The final prompt set is fed in as individual prompts into DALL.E. A function called generate_images is built into the pipeline to accomplish this.
 
 ### Prompt 1: Story Generation
-<img width="800" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%202.52.07%20PM.png">
+<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%202.52.07%20PM.png">
 
 
 ### Prompt 2: Split Story into Scenes
 
-<img width="800" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%202.52.07%20PM.png">
+<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%202.52.07%20PM.png">
 
 ## Considerations 
 The following issues and workarounds were built into the model: 
@@ -49,12 +49,12 @@ The program was able to produce a continuous story with individual scenes and co
 
 ### Sample Story and Scenes
 
-<img width="800" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.12.54%20PM.png">
+<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.12.54%20PM.png">
 
 
-### sample Final Output
+### Sample Final Output
 
-<img width="800" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.15.21%20PM.png">
+<img width="700" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.15.21%20PM.png">
 
 
 - **The model can be used for Interactive Storytelling:** Users can guide the narrative by providing inputs at key points, allowing for a dynamic and personalized story experience
