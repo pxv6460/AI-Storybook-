@@ -19,19 +19,27 @@ Entering these basic elements would help create a prompt that is the starting po
 <img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.20.11%20PM.png">
 
 ## Models 
-**StoryGPT** feature from OpenAI, designed to assist in generating plotlines ws used to generate the story. A pipeline is established to take the user input and generate an initial prompt 
-A function called ‘create_story’ generates the initial plotline. A function called ‘generate_scenes’ then splits the story into sub narratives or ‘scenes’. We parse scenes by recognizing the string
-The end result is a story split into sub narratives or scenes.
+**StoryGPT feature from OpenAI**, designed to assist in generating plotlines ws used to generate the story. A pipeline is established to take the user input and generate an initial prompt 
+- A function called ‘create_story’ generates the initial plotline
+- A function called ‘generate_scenes’ then splits the story into sub narratives or ‘scenes’
+We parse scenes by recognizing the string. The end result is a story split into sub narratives or scenes.
 
 Scenes needed to have continuity especially of the same character to eventually be used as input prompts for the image generator. To solve for this an additional prompt was added to isolate the character descriptions. This prompt is then appended to each scene description to provide the input to the DALL.E model. The final prompt set is fed in as individual prompts into DALL.E. A function called generate_images is built into the pipeline to accomplish this.
+
+<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.23.36%20PM.png">
 
 ### Prompt 1: Story Generation
 <img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%202.52.07%20PM.png">
 
-
 ### Prompt 2: Split Story into Scenes
 
 <img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%202.52.07%20PM.png">
+
+## Using an Image Generator
+**DALL.E** was used to generate the final set of images base don the individual prompts
+
+
+<img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.27.47%20PM.png">
 
 ## Considerations 
 The following issues and workarounds were built into the model: 
