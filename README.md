@@ -43,13 +43,11 @@ Scenes needed to have continuity especially of the same character to eventually 
 
 ## Considerations 
 The following issues and workarounds were built into the model: 
-**Issue 1:** Scene images disjointed - the shared prompt for character descriptions alleviates the issue to a good degree but there is room for improvement
 >
-**Issue 2:** Text in images generated - images generally contain text sometimes in different languages or incoherent script - prompt specification to not display text mitigated the issue
->
-**Issue 3:** theme and background inconsistent - while image matches the scene - sometimes the theme and background changes for each scene solved by shared image prompt
->
-**Issue 4:** Low quality in other Image generators tested - ‘free versions are bad, but both SD and Flux have manual seeds”
+- **Issue 1:** Scene images disjointed - the shared prompt for character descriptions alleviates the issue to a good degree but there is room for improvement
+- **Issue 2:** Text in images generated - images generally contain text sometimes in different languages or incoherent script - prompt specification to not display text mitigated the issue
+- **Issue 3:** theme and background inconsistent - while image matches the scene - sometimes the theme and background changes for each scene solved by shared image prompt
+- **Issue 4:** Low quality in other Image generators tested - ‘free versions are bad, but both SD and Flux have manual seeds”
 
 ## Results
 
