@@ -1,6 +1,6 @@
-# Project-3 - Once upon a Time - AI Storybook
+Once upon A(I) time ……
 
-
+## Project-3 - AI Storybook 
 Team 2 to Tango - Niharika, Hazel, Azlan, Peter and Enrique
 
 ## Introduction
@@ -47,7 +47,6 @@ The program was able to produce a continuous story with individual scenes and co
 ## Important Links
 
 - [Presentation](https://docs.google.com/presentation/d/1jbKWKgXU4R2W04QWH0Rhj7sKI2VNHgmkYwNa64NNSKc/edit?usp=sharing)
-- [Pre-processing Code](https://github.com/pxv6460/project-2-/blob/main/code/preprocessing.ipynb)
-- [Pre-processing Pipeline](https://github.com/pxv6460/project-2-/blob/main/code/preprocess_pipeline.py)
-- [ML Model Code](https://github.com/pxv6460/project-2-/blob/main/code/main.ipynb)
-- [ML Model Pipeline](https://github.com/pxv6460/project-2-/blob/main/code/pipeline.py)
+- [OpeAI Story Model Final Code]()
+- [OpeAI Storybook Model Pipeline]()
+- [MadLibs Model]()
