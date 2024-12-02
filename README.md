@@ -48,7 +48,7 @@ The following issues and workarounds were built into the model:
 - **Issue 1:** Scene images disjointed - the shared prompt for character descriptions alleviates the issue to a good degree but there is room for improvement
 - **Issue 2:** Text in images generated - images generally contain text sometimes in different languages or incoherent script - prompt specification to not display text mitigated the issue
 - **Issue 3:** theme and background inconsistent - while image matches the scene - sometimes the theme and background changes for each scene solved by shared image prompt
-- **Issue 4:** Low quality in other Image generators tested - ‘free’ versions are bad, but offer additional features like inserting manual seeds to control uniform character images (Stable Diffusion and Flux tested here- see code for 'MAdLibs Version in link below for additional details)
+- **Issue 4:** Low quality in other Image generators tested - ‘free’ versions are bad, but offer additional features like inserting manual seeds to control uniform character images (**Stable Diffusion and Flux tested here- see code for 'MAdLibs Version in link below for additional details**)
 
 ## Results
 
@@ -77,5 +77,5 @@ The program was able to produce a continuous story with individual scenes and co
 - [Presentation](https://docs.google.com/presentation/d/1jbKWKgXU4R2W04QWH0Rhj7sKI2VNHgmkYwNa64NNSKc/edit?usp=sharing)
 - [OpeAI Story Model Final Code](https://github.com/pxv6460/AI-Storybook-/blob/main/openai.ipynb)
 - [OpeAI Storybook Model Pipeline](https://github.com/pxv6460/AI-Storybook-/blob/main/storygpt.py)
-- [MadLibs Model]()
+- [MadLibs Model](https://github.com/pxv6460/AI-Storybook-/blob/main/storybook.ipynb)
 - Cover Image References - [The art and magic of storytelling](https://pxpfoto.com/storytelling/)
