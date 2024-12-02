@@ -38,8 +38,9 @@ Scenes needed to have continuity especially of the same character to eventually 
 ## Using an Image Generator
 **DALL.E** was used to generate the final set of images base don the individual prompts
 
-
 <img width="600" alt="Screenshot 2024-10-07 at 6 06 53 PM" src="https://github.com/niarapur/Project-3-support/blob/main/Screen%20Shot%202024-12-02%20at%203.27.47%20PM.png">
+
+## Additional Model built using 
 
 ## Considerations 
 The following issues and workarounds were built into the model: 
@@ -47,7 +48,7 @@ The following issues and workarounds were built into the model:
 - **Issue 1:** Scene images disjointed - the shared prompt for character descriptions alleviates the issue to a good degree but there is room for improvement
 - **Issue 2:** Text in images generated - images generally contain text sometimes in different languages or incoherent script - prompt specification to not display text mitigated the issue
 - **Issue 3:** theme and background inconsistent - while image matches the scene - sometimes the theme and background changes for each scene solved by shared image prompt
-- **Issue 4:** Low quality in other Image generators tested - ‘free versions are bad, but both SD and Flux have manual seeds”
+- **Issue 4:** Low quality in other Image generators tested - ‘free’ versions are bad, but offer additional features like inserting manual seeds to control uniform character images (Stable Diffusion and Flux tested here- see code for 'MAdLibs Version in link below for additional details)
 
 ## Results
 
